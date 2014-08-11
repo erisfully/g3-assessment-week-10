@@ -1,6 +1,12 @@
 <h1>New gif</h1>
 
 <%= form_for @gif do |f| %>
+  <% if @gif.errors.any? %>
+    <div>
+    <%= "Url can't be blank" %>
+    </div>
+    <%= "Title can't be blank" %>
+  <% end %>
 <%= f.label :url %>
 <%= f.text_field :url %>
 

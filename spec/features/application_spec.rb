@@ -14,13 +14,23 @@ feature "Applcation" do
 
     click_link "New gif"
 
-    fill_in "Url", with: "http://gph.is/XKMKQM"
+    fill_in "Url", with: "http://i.imgur.com/pOTYKIX.gif"
     fill_in "Title", with: "Yeah!"
 
     click_on "Create gif"
 
     expect(page).to have_content "gif created successfully"
+    # test for image here
 
+    click_link "New gif"
+
+    fill_in "Url", with: ""
+    fill_in "Title", with: ""
+
+    click_on "Create gif"
+
+    expect(page).to have_content "Url can't be blank"
+    expect(page).to have_content "Title can't be blank"
   end
 
 end
