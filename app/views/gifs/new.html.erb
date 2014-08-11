@@ -2,10 +2,12 @@
 
 <%= form_for @gif do |f| %>
   <% if @gif.errors.any? %>
-    <div>
+    <div class="error">
     <%= "Url can't be blank" %>
     </div>
+    <div class="error">
     <%= "Title can't be blank" %>
+    </div>
   <% end %>
 <%= f.label :url %>
 <%= f.text_field :url %>
