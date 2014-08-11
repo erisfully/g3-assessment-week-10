@@ -13,5 +13,11 @@ feature "Applcation" do
     visit "/"
 
     click_link "New gif"
+
+    fill_in "Url", with: "http://gph.is/XKMKQM"
+    fill_in "Title", with: "Yeah!"
+
+    
   end
+
 end

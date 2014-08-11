@@ -1,2 +1,12 @@
 <h1>New gif</h1>
 
+<%= form_for @gif do |f| %>
+<%= f.label :url %>
+<%= f.text_field :url %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.submit "Create gif" %>
+
+<% end %>
