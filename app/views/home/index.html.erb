@@ -1,4 +1,17 @@
 <h2>Welcome</h2>
 
+<%= flash[:notice] %>
+
+<div>
 <a href="/about">About</a>
+</div>
+<div>
 <a href="/gifs/new">New gif</a>
+</div>
+
+<% @gifs.each do |gif| %>
+<li><img src="<%= gif[:url] %>"></li>
+<% end %>
+
+
+

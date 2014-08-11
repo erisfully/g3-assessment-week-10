@@ -17,7 +17,10 @@ feature "Applcation" do
     fill_in "Url", with: "http://gph.is/XKMKQM"
     fill_in "Title", with: "Yeah!"
 
-    
+    click_on "Create gif"
+
+    expect(page).to have_content "gif created successfully"
+
   end
 
 end
