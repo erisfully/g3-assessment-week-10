@@ -20,8 +20,8 @@ feature "Applcation" do
     click_on "Create gif"
 
     expect(page).to have_content "gif created successfully"
-    # test for image here
-
+    expect(page).to have_content "Yeah!"
+    
     click_link "New gif"
 
     fill_in "Url", with: ""

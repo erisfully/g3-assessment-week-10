@@ -10,7 +10,8 @@
 </div>
 
 <% @gifs.each do |gif| %>
-<li><img src="<%= gif[:url] %>"></li>
+<li><img src="<%= gif[:url] %>">
+  <%= gif[:title] %></li>
 <% end %>
 
 
