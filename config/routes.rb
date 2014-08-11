@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   get "/about" => "home#about"
 
+  resources :gifs
+
 end

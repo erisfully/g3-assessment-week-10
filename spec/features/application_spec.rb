@@ -9,5 +9,9 @@ feature "Applcation" do
     click_link "About"
 
     expect(page).to have_content "Not much to say here"
+
+    visit "/"
+
+    click_link "New gif"
   end
 end
