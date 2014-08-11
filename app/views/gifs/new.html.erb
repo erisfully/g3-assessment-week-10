@@ -9,12 +9,16 @@
     <%= "Title can't be blank" %>
     </div>
   <% end %>
-<%= f.label :url %>
+  <div>
+<%= f.label :url %><br>
 <%= f.text_field :url %>
-
-<%= f.label :title %>
+  <p class="error"><%= @gif.errors[:url].first %></p>
+  </div>
+  <div>
+<%= f.label :title %><br>
 <%= f.text_field :title %>
-
+  <p class="error"><%= @gif.errors[:title].first %></p>
+  </div>
 <%= f.submit "Create gif" %>
 
 <% end %>
