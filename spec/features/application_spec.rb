@@ -5,5 +5,9 @@ feature "Applcation" do
     visit "/"
 
     expect(page).to have_content "Welcome"
+
+    click_link "About"
+
+    expect(page).to have_content "Not much to say here"
   end
 end
